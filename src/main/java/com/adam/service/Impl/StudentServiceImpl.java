@@ -10,4 +10,5 @@ public class StudentServiceImpl implements StudentService{
     public String getHelloWold() {
         return "Hello Wold";
     }
+
 }
