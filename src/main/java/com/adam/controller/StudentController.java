@@ -25,11 +25,12 @@ public class StudentController {
 
         Student student = new Student();
         student.setName(name);
-
         student.setSex(sex);
         studentRepository.save(student);
         return "Saved";
     }
+
+
 
     //Get By Hello World
     @GetMapping(path = "/findByHelloWorld") // Map ONLY Get By Id Requests
