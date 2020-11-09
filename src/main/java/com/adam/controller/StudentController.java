@@ -46,4 +46,13 @@ public class StudentController {
         return studentRepository.findById(id);
     }
 
+    //Update Name By Id
+    @GetMapping(path = "/setFixedNameFor") // Map ONLY Get By Student Requests
+    public @ResponseBody String setFixedNameFor(@RequestParam String name,
+                                                @RequestParam int id) {
+
+        studentRepository.setFixedNameFor(name,id);
+        return "PUT OK";
+    }
+
 }
