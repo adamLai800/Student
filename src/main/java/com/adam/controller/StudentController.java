@@ -55,4 +55,12 @@ public class StudentController {
         return "PUT OK";
     }
 
+    //Delete By Id
+    @DeleteMapping(path = "/deleteById") // Map ONLY Delete All Requests
+    public @ResponseBody String deleteById(@RequestParam int id) {
+        studentRepository.deleteById(id);
+        String showdeleteid = " Id " + id;
+        return showdeleteid;
+    }
+
 }
